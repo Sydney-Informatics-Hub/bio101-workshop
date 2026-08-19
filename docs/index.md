@@ -6,13 +6,6 @@ fails across the study design workflow. This workshop is designed for researcher
 - Work with or plan to use omics technologies 
 - Are involved in study design, sample collection, and/or data interpretation, as a wet lab researcher, clinician or junior bioinformaticians
 
-## Developers
-
-- Amarinder Thind, Sydney Informatics Hub, University of Sydney
-- Georgie Samaha, Sydney Informatics Hub, University of Sydney
-- Mitchell O'Brien, Sydney Informatics Hub, University of Sydney
-- Fred Jaya, Sydney Informatics Hub, University of Sydney
-
 ## Prerequisites
 
 - A basic understanding of biological research concepts related to genes, proteins, and metabolites 
@@ -36,4 +29,7 @@ Our full CoC, with incident reporting guidelines, is available [here](https://sy
 
 This workshop event and accompanying materials were developed by the [Sydney Informatics Hub](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub.html), University of Sydney. 
 
-![](./img/logos.png)
+- Amarinder Thind, Sydney Informatics Hub, University of Sydney
+- Georgie Samaha, Sydney Informatics Hub, University of Sydney
+- Mitchell O'Brien, Sydney Informatics Hub, University of Sydney
+- Fred Jaya, Sydney Informatics Hub, University of Sydney
