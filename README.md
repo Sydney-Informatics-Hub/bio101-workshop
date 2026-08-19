@@ -4,6 +4,10 @@ Omics technologies are now routine tools across the life sciences. Most omics tr
 
 In this workshop, you will learn the basics of study design for bioinformatics-based research. Through real world examples, you’ll explore the main omics data types and how they differ from conventional biological data, identify key decision-making steps during a full experimental workflow, and show how decisions at each stage propagate into your results. Working through these principles, you will be better equipped to design robust bioinformatics experiments, critically evaluate the design of others, and avoid the mistakes that downstream analyses cannot fully fix.
 
+## Event details 
+
+See the [Eventbrite](https://www.eventbrite.com.au/e/bioinformatics-workshop-design-foundations-for-omics-studies-tickets-1993800834969?aff=oddtdtcreator) page for event registration details. 
+
 ## Developers 
 
 - Amarinder Thind 
