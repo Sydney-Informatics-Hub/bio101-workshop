@@ -259,69 +259,46 @@ No single layer answered the question of what is driving these patients' heart f
 | **Proteome** | Functional molecules and their state | Physiological consequences | What is the cell doing to produce this phenotype? |
 | **Metabolome** | Current physiological state | The underlying cause | What is the biochemical state associated with this phenotype? |
 
-These layers are interconnected and feed back on each other. The table sets out where each layer is strongest, not a strict division of what each can address in isolation.
-
----
-
-## Activity
-
-Each of the five molecular layers described above is studied by its own scientific field. Collectively, these fields are called **omics**: genomics, epigenomics, transcriptomics, proteomics, metabolomics. The suffix denotes the comprehensive study of an entire class of molecules. 
-
-The ambition is a global view of a biological layer, rather than the targeted measurement of selected molecules that characterised earlier approaches.
+Each of the five molecular layers described above is studied by its own scientific field. Omics gives us a global view of a biological layer, rather than the targeted measurement of selected molecules that characterised earlier approaches. These layers are interconnected and feed back on each other. The table sets out where each layer is strongest, not a strict division of what each can address in isolation.
 
 !!! question "Walk the layers"
 
-    Pick the broad question closest to your field, or reinterpret the example using an organism or system you work with. These examples represent high-level biological questions rather than specific studies, and the same design principles apply across systems.
+    Form groups based on the organism you work with. Introduce your research to each other in a couple of sentences, then choose a high-level biological question your group wants to work through together.
 
-    Walk through the molecular layers and decide how you would approach the question.
+    Walk through the molecular layers and decide how you would approach your question. Write your answers on butchers paper and report back to the room (2 minutes per group).
 
-    In your group, discuss:
-
-    1. **Which molecular layer would you start with, and why?**
-    2. **What would this layer tell you, and what would it miss?**
-    3. **What comparisons or timing would be needed to 
-       make this study meaningful?**
-  
-    <!-- 4. **Budget check:** you can measure only one molecular layer 
-       initially. What evidence would convince you to add a second? -->
-
-    **Report back:** your chosen layer, what another layer might 
-    have revealed, and one assumption behind your choice.
+    1. **Which molecular layer is suited to answering your question, and why?**
+    2. **What can this layer tell you, and what would it miss?**
+    3. **What comparisons or timing would be needed to make this study meaningful?**
 
     ??? example "Clinical / human disease"
 
-        **What drives progression from a treatable tumour to one that 
-        resists therapy?**
+        **What is driving these patients' heart failure?**
 
-        Consider: where would you sample from, when in the disease 
-        course, and what would each molecular layer contribute to 
-        understanding progression?
+        A population of patients presents to hospital with heart failure and the underlying cause is unclear. Consider: would you start with inherited predisposition, the current transcriptional state of cardiac tissue, the metabolic status of the failing heart, or something else? What would each layer contribute, and what would remain unanswered?
 
     ??? example "Wildlife / infectious disease"
 
-        **Why do some populations tolerate an infectious disease while 
-        others suffer severe disease from the same pathogen?**
+        **Why do some populations tolerate an infectious disease while others suffer severe disease from the same pathogen?**
 
-        Consider: is this a host question (immune response, genetic 
-        resistance), a pathogen question (strain, virulence factors), 
-        or both? Use any host–pathogen system relevant to your field.
+        Consider: is this a host question (immune response, genetic resistance), a pathogen question (strain, virulence factors), or both? Use any host–pathogen system relevant to your field.
 
     ??? example "Aquaculture / production biology"
 
-        **Why do some farmed fish grow faster than others despite 
-        receiving the same diet?**
+        **Why do some farmed fish grow faster than others despite receiving the same diet?**
 
-        Consider: if diet is held constant, what could explain the 
-        variation? Genetics, developmental history, physiology, gut 
-        microbes? Which layer would you measure first, and how would 
-        you sample to make the comparison meaningful?
+        Consider: if diet is held constant, what could explain the variation? Genetics, developmental history, physiology, gut microbes? Which layer would you measure first, and how would you sample to make the comparison meaningful?
 
     ??? example "Plant / environmental stress"
 
-        **How does a crop plant respond to acute environmental stress, 
-        and what makes some varieties more tolerant than others?**
+        **How does a crop plant respond to acute environmental stress, and what makes some varieties more tolerant than others?**
 
-        Consider: the stress could be drought, heat, or salinity, pick 
-        whichever fits your system. The response happens fast, over 
-        hours to days. Which layers capture that timescale, and which 
-        are too slow or too stable to see it?
+        Consider: the stress could be drought, heat, or salinity — pick whichever fits your system. The response happens fast, over hours to days. Which layers capture that timescale, and which are too slow or too stable to see it?
+
+---
+
+!!! info "Module 1.1 takeaways"
+
+    - The five omics layers each capture a different dimension of biological state, ordered by their position in the flow of information from DNA to biochemical function. 
+    - The 5 omics layers are connected through the central dogma but are not redundant
+    - The layer you choose determines what research questions you can answer, what its limitations are, and what analytical assumptions follow. 
