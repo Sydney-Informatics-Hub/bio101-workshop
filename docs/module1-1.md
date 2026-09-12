@@ -31,7 +31,7 @@ Most biological questions can be investigated at multiple molecular layers. Each
 
 The molecular layers follow a path described by the central dogma of molecular biology: DNA is transcribed to RNA, RNA is translated to protein, and protein actively drives metabolic reactions. Exceptions and regulatory mechanisms complicate this picture but the framework remains a useful starting point for understanding how information flows between layers and where omics technology intervenes. 
 
-??? warning "The central dogma: exceptions to the rule"
+!!! warning "The central dogma: exceptions to the rule"
     The central dogma is a useful framework, not a complete description of how biological information flows. Well-established exceptions include [reverse transcription](https://www.pnas.org/doi/10.1073/pnas.2604888123), RNA-based regulation of gene expression through [non-coding RNAs](https://www.cell.com/cell/fulltext/S0092-8674(24)01206-6), and [prion proteins](https://www.nature.com/articles/s41467-022-31460-8) that propagate heritable stats without any nucleic acid template. Our understanding of these exceptions continue to expand. 
 
 
@@ -147,7 +147,9 @@ Beyond messenger RNA (mRNA), the transcriptome includes non-coding RNAs like mic
 
 #### Role in biology
 
-The transcriptome is the most dynamic of the molecular layers. Gene expression changes rapidly in response to developmental signals, environmental conditions, disease, and treatment. This responsiveness makes it a sensitive readout of cellular state. BUT it also means results depend heavily on when and from which tissue the sample was collected. A transcriptomic snapshot captures one moment in a continuous, context-dependent process.
+The transcriptome is the most dynamic of the molecular layers. It is the primary mechanism by which cells regulate their functional state in response to changing conditions. Gene expression is the main lever cells use to adjust which proteins they produce, which pathways they activate, and how they respond to developmental cues, environmental stress, disease, and treatment. It is the layer at which genetic potential is converted into cellular action.
+
+Gene expression changes rapidly in response to developmental signals, environmental conditions, disease, and treatment. This responsiveness makes it a sensitive readout of cellular state, however what you see in the readout depends heavily on when and from which tissue the sample was collected. A transcriptomic snapshot captures one moment in a continuous, context-dependent process.
 
 #### Insights this layer can provide
 
