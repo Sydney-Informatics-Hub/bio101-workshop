@@ -1,35 +1,55 @@
-# BIO101 - Design foundations for omics studies
+# BIO101: Foundations of omics study design
 
-This workshop is delivered over a single 6-hour session that covers the decisions that most often determine whether an omics study succeeds or 
-fails across the study design workflow. This workshop is designed for researchers who generate or interpret 'omics data and want to strengthen their understanding of study design and planning. You will benefit from this workshop if you:
+This workshop introduces you to the principles and practices needed to design omics experiments with a focus on decisions made before data generation: platform selection, sample size, batch structure, and metadata collection. It also covers post-hoc assessment of datasets for bias, quality issues, and common interpretation errors. The content is broken up into 3 modules that cover: 
 
-- Work with or plan to use omics technologies 
-- Are involved in study design, sample collection, and/or data interpretation, as a wet lab researcher, clinician or junior bioinformaticians
+- [Module 1](module1-1.md): Understanding molecular layers
+- [Module 2](module2-0.md): Designing robust studies 
+- [Module 3](): Applying experimental design principles 
 
-## Prerequisites
+## Background 
 
-- A basic understanding of biological research concepts related to genes, proteins, and metabolites 
-- Participants should bring a laptop for browser-based practical activities (no software installation required)
+Well designed omics studies begin with clear biological questions that work outward: identifying the molecular layer that can address it, selecting a platform that captures the relevant signal, and structuring the experiment to produce results that are statistically interpretable and generalisable beyond the study cohort. 
+
+## Audience
+
+This workshop is targeted at researchers who generate or interpret omics data and want a stronger foundation in study design and pre-generation planning. This workshop is appropriate for you if you: 
+
+- Work with or plan to use omics technologies in your research experiments
+- Are involved in study design, sample collection, or data interpretation
+- Want to understand why omics studies fail and how to prevent the most common design errors 
+
+## Prerequisites 
+
+- Conceptual familiarity with at least one omics platform
+- Basic understanding of molecular biology: what genes, transcripts, proteins, and metabolites are
+
+## Learning outcomes
+
+By the end of this workshop, participants will be able to: 
+
+- Match a biological question to the molecular layer and omics data type that can address it, and recognise what the data cannot tell you 
+- Describe how omics data types are generated and how they differ from conventional biological measurements 
+- Identify key decision points across an omics workflow and explain how decisions at each stage affect the final result
+- Evaluate an omics study design in terms of statistical power, cost, interpretability, and generalisability
+- Diagnose confounding and batch structure and propose design changes to reduce their impact 
+
+## Developers
+
+- Amarinder Singh Thind
+- Georgie Samaha
+- Mitchell O'Brien
+- Fred Jaya
 
 ## Code of Conduct
-We expect all attendees of our training to follow our code of conduct, including bullying, harassment and discrimination prevention policies.
+
+We expect all attendees of our training to follow our code of conduct, including bullying, harassment and discrimination prevention policies. 
 
 In order to foster a positive and professional learning environment we encourage the following kinds of behaviours at all our events and on our platforms:
 
-- Use welcoming and inclusive language
-- Be respectful of different viewpoints and experiences
-- Gracefully accept constructive criticism
-- Focus on what is best for the community
-- Show courtesy and respect towards other community members
+- Use welcoming and inclusive language  
+- Be respectful of different viewpoints and experiences  
+- Gracefully accept constructive criticism  
+- Focus on what is best for the community  
+- Show courtesy and respect towards other community members    
 
-Our full CoC, with incident reporting guidelines, is available [here](https://sydney-informatics-hub.github.io/codeofconduct/).
-
-
-## Credits and acknowledgements
-
-This workshop event and accompanying materials were developed by the [Sydney Informatics Hub](https://www.sydney.edu.au/research/facilities/sydney-informatics-hub.html), University of Sydney. 
-
-- Amarinder Thind, Sydney Informatics Hub, University of Sydney
-- Georgie Samaha, Sydney Informatics Hub, University of Sydney
-- Mitchell O'Brien, Sydney Informatics Hub, University of Sydney
-- Fred Jaya, Sydney Informatics Hub, University of Sydney
+Our full code of conduct, with incident reporting guidelines, is available [here](https://sydney-informatics-hub.github.io/codeofconduct/).
