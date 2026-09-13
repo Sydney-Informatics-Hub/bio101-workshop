@@ -58,34 +58,41 @@ Platform selection follows from the hypothesis. The question help identify which
 ## Consideration 1: Cohort design and confounding
 
 !!! danger "Design principle"
-    A potential confounder that is neither controlled nor recorded cannot be evaluated or accounted for during analysis. Record important variables that could be associated with the condition/exposure and affect the omics measurements.
+    Cohort design determines what comparisons are possible. If the samples you collect do not represent the population of interest, or if your comparison groups differ in ways unrelated to the biological question, those differences will be present in the data and cannot be removed after collection. A confounder that is neither controlled nor recorded during study design cannot be evaluated or accounted for during analysis.
 
 ??? note "Key terms"
     | Term | Definition |
     |---|---|
     | **Matching** | Selecting cases and controls so that relevant characteristics, such as age or sex, are similarly distributed between the groups |
     | **Stratification** | Dividing the study population into subgroups defined by a variable, then making comparisons within each subgroup |
-    | **Randomisation** | Randomly distributing samples from each condition or exposure group across processing batches and run order to reduce systematic imbalance. |
-    | **Metadata** | Structured information describing the samples, conditions, collection and processing e.g. demographics, collection site, processing batch, storage conditions, and any other variable that might influence the measurement |
+    | **Randomisation** | Randomly distributing samples from each condition or exposure group across processing batches and run order to reduce systematic imbalance |
+    | **Metadata** | Structured information describing the samples, conditions, collection and processing — e.g. demographics, collection site, processing batch, storage conditions, and any other variable that might influence the measurement |
 
-Because omics measurements are sensitive to both biological and technical variation, cohort composition and sample processing must be planned together.
+The fundamental question in cohort design is whether the samples you have collected are the right samples to answer your research question. This has two components.
 
-Approaches for managing confounders: matching, stratification, randomisation, and balanced sampling, are covered in [Module 2: Confounding](https://sydney-informatics-hub.github.io/omics-study-designs-and-data-interpretation/module2-1-2/){target="_blank"}. Not all confounders can be controlled in advance, particularly in retrospective studies where samples were collected before the study was designed. The minimum requirement is that important sources of variation are recorded in study metadata whenever possible, so they can be evaluated during analysis.
+1. **Are the samples representative of the population you want to make inferences about?** A study of cardiac gene expression in domestic cats with hypertrophic cardiomyopathy that recruits only Maine Coons from a single referral breeder or country produces results that may not generalise to other breeds, populations, or clinical settings. This matters when interpreting whether findings are specific to a genetic background, an institutional context, or the condition itself.
 
-*Example:* A study recruiting cases from a specialist hospital and controls from a community health screen may differ systematically in age, medication use, comorbidity burden, and health seeking behaviour. These differences may affect the omics data, and be mistaken for differences associated with condition/exposure status (e.g. case/control).
+2. **Do the comparison groups differ only in the condition or exposure of interest?** If sample groupings are collected through different pathways, from different institutions, or at different time points, they may differ systematically in ways that have nothing to do with the biology. Those differences will appear in the omics data and can be mistaken for condition-associated signal. Variables that differ between groups for reasons unrelated to the biological question are confounders.
+
+### Evaluating the literature
+
+Before finalising cohort design, evaluate what has been published. The literature tells you what populations and tissues have been studied, what confounders have been identified and how they were handled, and what effect sizes are plausible. It also tells you what reference datasets exist and what populations they were built from.
+
+Reference datasets (e.g. population allele frequency databases) are popular and commonly used in bioinformatics. They carry their own sampling biases. Using a published atlas or reference range as a comparison point requires understanding whether its donor population is appropriate for your study. A reference built predominantly from one sex, age range, ancestry, or disease status will reflect those characteristics in its values, and differences between your data and the reference may reflect population composition rather than biology.
+
+Approaches for managing confounders are covered in [Module 2: Confounding](). Not all confounders can be controlled in advance, particularly in retrospective studies where samples were collected before the study was designed. The minimum requirement is that important sources of variation are recorded in study metadata whenever possible, so they can be evaluated during analysis.
 
 ??? example "Case study: Reference datasets carry their own sampling biases"
 
-    The GTEx project is a widely used reference atlas of gene expression across human tissues. A 2020 analysis of GTEx data from 44 tissues found that 37% of genes showed sex biased expression in at least one tissue, although most effects were small and tissue-specific. Because the GTEx donor cohort contains more males than females and has particular age and ancestry distributions, studies using it as an external comparison should consider whether its population composition is appropriate for their study.
+    The GTEx project is a widely used reference atlas of gene expression across human tissues. A 2020 analysis of GTEx data from 44 tissues found that 37% of genes showed sex-biased expression in at least one tissue, although most effects were small and tissue-specific. Because the GTEx donor cohort contains more males than females and has particular age and ancestry distributions, studies using it as an external comparison should consider whether its population composition is appropriate for their study.
 
-    This issue is not specific to GTEx or gene expression data. Any population derived reference, such as a methylation atlas, plasma proteomic reference range, metabolite reference interval or population allele-frequency database reflects the cohort from which it was built. A 2011 review of studies in non-human mammals across ten biological fields found that male only studies outnumbered female only studies by 5.5:1 in neuroscience and approximately 5:1 in pharmacology, with the sex of the animals frequently unreported. Reflecting broader concerns about sex bias in research, an NIH policy effective from 2016 required sex to be considered in the design, analysis and reporting of relevant NIH-funded studies involving vertebrate animals and humans.
+    This issue is not specific to GTEx or gene expression data. Any population-derived reference (e.g. a methylation atlas, plasma proteomic reference range, metabolite reference interval, or population allele-frequency database) reflects the cohort from which it was built. A review ([Beery & Zucker, 2011](https://doi.org/10.1016/j.neubiorev.2010.07.002)) of studies in non-human mammals across ten biological fields found that male-only studies outnumbered female-only studies by 5.5:1 in neuroscience and approximately 5:1 in pharmacology, with the sex of the animals frequently unreported. Reflecting broader concerns about sex bias in research, an NIH policy effective from 2016 required sex to be considered in the design, analysis, and reporting of relevant NIH-funded studies involving vertebrate animals and humans.
 
     <small>Beery & Zucker. *Neuroscience & Biobehavioral Reviews* 35, 565–572 (2011). [doi:10.1016/j.neubiorev.2010.07.002](https://doi.org/10.1016/j.neubiorev.2010.07.002){target="_blank"}</small>
 
     <small>Oliva et al. *Science* 369, eaba3066 (2020). [doi:10.1126/science.aba3066](https://doi.org/10.1126/science.aba3066){target="_blank"}</small>
 
     <small>National Institutes of Health. *Consideration of Sex as a Biological Variable in NIH-funded Research* (2015; effective 2016). [NOT-OD-15-102](https://grants.nih.gov/grants/guide/notice-files/not-od-15-102.html){target="_blank"}</small>
-
 ---
 
 ## Consideration 2: Platform selection
