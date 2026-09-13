@@ -41,8 +41,11 @@ The figure below maps these five molecular layers onto the central dogma, showin
 
 Each layer captures a different slice of biology, and no single layer gives the whole picture. To make that concrete, we will follow a single clinical question through all five layers.
 
-!!! question "Research experiment scenario: unexplained heart failure"
-    A population of patients present to hospital with heart failure and the underlying cause is unclear. We will ask the same question at each molecular layer: ***what is driving these patients' heart failure?***
+!!! question "Research scenario: hypertrophic cardiomyopathy in domestic cats"
+
+    A population of Maine Coon cats are screened at a cardiology clinic. Some have severe hypertrophic cardiomyopathy (HCM). Some have [a known *MYBPC3* variant](https://www.omia.org/OMIA002952/9685/) but no cardiac abnormality. Some have HCM with no identified variant. Same breed, same environment, different outcomes. **What is driving cardiac disease in this population?**
+
+    As you work through each molecular layer below, consider: **what would this layer tell you about what is driving their heart failure, and what would it leave unanswered?**
 
 ??? note "Layers overlap: the choice is fit, not exclusivity" 
     Most questions can be approached from more than one layer. The lists below show what each layer is best suited to answer, not what it alone can answer.
@@ -86,17 +89,12 @@ A gene's presence tells us nothing about whether it is transcribed, how much pro
 
 ??? note "The genome in our research question"
 
-    Blood-derived DNA from our heart failure patients can be screened for inherited variants in genes with established roles in cardiomyopathy. Whole genome or whole exome sequencing can identify rare pathogenic variants. For example, a truncating mutation in *TTN* (which encodes titin, the largest protein in the sarcomere and a major structural component of cardiac muscle) or a missense variant in *MYH7* (beta myosin heavy chain, the primary motor protein driving cardiac contraction). Variants in these genes are among the most common monogenic causes of dilated cardiomyopathy.
+    DNA from blood or buccal swabs can be genotyped or sequenced to identify inherited variants in genes with established roles in hypertrophic cardiomyopathy (HCM). In Maine Coons, a founder [variant in *MYBPC3* (c.91G>C, p.A31P)](https://www.omia.org/variant/omia.variant:901/) encodes a truncated cardiac myosin-binding protein C that disrupts sarcomere assembly. A separate founder variant in Muchkins, Bobtails, and Ragdolls [(*MYBPC3* p.R818W)](https://www.omia.org/variant/omia.variant:902/) has also been identified. Both variants were identified by sequencing affected cats and segregating the variant through family pedigrees.
 
-    Genomic analysis can also identify variants in non-coding regulatory regions that alter gene expression rather than protein sequence, and copy number variants that affect gene dosage. In a cohort study, comparing variant frequencies between patients and healthy controls can identify genomic loci associated with disease susceptibility or severity.
+    In a clinic population, genotyping can classify each cat as homozygous variant, heterozygous, or wild-type. Homozygous cats are more likely to develop severe, early-onset disease. Across a cohort, comparing variant frequency and cardiac phenotype allows genotype–phenotype correlation — but the relationship is not deterministic.
 
-    - **What we learned:** a subset of patients carry pathogenic variants 
-      in sarcomere genes, providing a potential molecular explanation for 
-      their cardiac dysfunction.
-    - **What we still don't know:** whether those variants are penetrant 
-      in these individuals — not all carriers develop disease — and whether 
-      patients without identified variants have a different underlying cause 
-      that genomics alone cannot reveal.
+    - **What we learned:** a subset of cats in this population carry a pathogenic variant in a sarcomere gene, providing a molecular explanation for their predisposition to HCM.
+    - **What we still don't know:** why heterozygous cats with the same variant differ in clinical outcome, and what is driving disease in cats with no identified variant.
 ---
 
 ### Layer 2: DNA modification (the epigenome) 
@@ -125,10 +123,15 @@ Epigenetic changes indicate regulatory potential, not gene expression. An access
 
 ??? note "The epigenome in our research question"
 
-    The epigenome can tell us which genes containing variants of interest are accessible for transcription in the failing heart. Profiling chromatin accessibility (ATAC-seq) or DNA methylation in cardiac tissue can reveal whether stress-response gene regions have opened up. This is a pattern associated with cardiac remodelling under sustained pressure or volume overload. Epigenetic changes reflect the cell's response to disease, not its inherited predisposition.
+    Epigenomic profiling captures heritable changes to gene regulation that are not encoded in DNA sequence, including DNA methylation patterns, histone modifications, and chromatin accessibility at regulatory regions. In cardiac tissue, these marks determine which genes are accessible for transcription and how strongly they are expressed.
 
-    - **What we learned:** stress-response and remodelling gene regions have become accessible in the patients' failing myocardium, consistent with active transcriptional reprogramming under sustained cardiac stress.
-    - **What we still don't know:** whether those accessible regions are actually being transcribed, and whether the epigenetic changes are driving disease progression, compensating for it, or both.
+    In a population of Maine Coons with identical *MYBPC3* genotypes but divergent cardiac phenotypes, epigenomic data could reveal whether regulatory differences at pro-hypertrophic or fibrotic loci correspond to disease progression. Haemodynamic stress (the mechanical load imposed by a stiffened ventricle) is known to induce epigenetic remodelling in cardiomyocytes, creating an epigenetic record of cardiac history that accumulates before clinical signs appear.
+
+    - **What we learned:** epigenomic profiling could reveal why cats with the same variant differ in outcome — regulatory state, not sequence, may determine penetrance (in some cases, not all carriers of a causative variant develop disease).
+    - **What we still don't know:** epigenomic data tells us that regulatory 
+      differences exist between cats, but not which differences are causal, 
+      which are compensatory, and which are incidental to disease.
+
 ---
 
 ### Layer 3: RNA (the transcriptome)
@@ -163,10 +166,12 @@ RNA abundance does not reliably predict protein abundance. Post-transcriptional 
 
 ??? note "The transcriptome in our research question"
 
-    Moving from the epigenome to the transcriptome takes us from accessibility to observed activity. Measuring the transcriptome of failing cardiac tissue tells us which genes are up or downregulated relative to healthy myocardium, which signalling pathways, fibrosis, inflammation, hypertrophy, are engaged, and which isoforms are being produced from genes such as *TTN*, where isoform switching between the compliant fetal N2BA isoform and the adult N2B isoform has direct mechanical consequences for cardiac function.
+    RNA sequencing from cardiac tissue quantifies gene expression across all cell types present in the sampled tissue (cardiomyocytes, fibroblasts, endothelial cells, immune infiltrates). In a study comparing humans, mice, and domestic cats, single-cell RNA sequencing of *MYBPC3*-associated HCM identified shared transcriptional programmes across feline and human cardiac tissue: upregulation of hypertrophic signalling, fibrotic remodelling pathways, and cell-type-specific stress responses in cardiomyocytes and fibroblasts ([Ali et al., JAHA 2025](https://www.ahajournals.org/doi/epub/10.1161/JAHA.124.035780)).
 
-    - **What we learned:** stress-response and remodelling genes are actively transcribed; fibrosis and hypertrophy pathways are upregulated; isoform shifts in structural genes are detectable and functionally relevant.
-    - **What we still don't know:** whether those transcripts are being translated into functional protein at the expected levels, and whether the resulting proteins are correctly localised and active within the sarcomere.
+    Transcriptomic profiling does not require prior specification of which genes to measure. Cats with the same *MYBPC3* genotype but different cardiac phenotypes can be distinguished by their expression profiles as the transcriptome reflects what the heart is actively doing under its current haemodynamic conditions, integrating both genetic predisposition and environmental load.
+
+    - **What we learned:** affected cats show coordinated transcriptional activation of hypertrophic and fibrotic programmes, consistent with what is seen in human MYBPC3 HCM, identifying conserved disease mechanisms.
+    - **What we still don't know:** transcriptomics cannot tell us whether sarcomere proteins are being produced at normal stoichiometry, whether truncated MYBPC3 protein is present and incorporated into the sarcomere, or how contractile function is altered at the protein level.
 
 ---
 
@@ -200,10 +205,10 @@ Protein abundance alone does not capture activity. A protein can be present in a
 
 ??? note "The proteome in our research question"
 
-    Measuring the proteome of cardiac tissue or plasma brings us to the level of functional molecules. Clinically actionable signals emerge here that are invisible to transcriptomics: elevated BNP and troponin in plasma reflect cardiac stress and injury at the protein level; mislocalisation of sarcomeric proteins disrupts the mechanical function of the contractile apparatus; and abnormal phosphorylation of contractile proteins alters their calcium sensitivity and force generation. Proteomics can also expose mismatches with the transcriptomic picture, a transcript upregulated in the failing heart whose protein product is simultaneously being degraded, or a structural protein present at normal abundance but carrying modifications that impair its function.
+    Mass spectrometry-based proteomics quantifies which proteins are present in a sample and at what abundance. [Jiwaganont et al. (2024)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11225243/) looked at the cats with symptomatic HCM versus healthy controls carrying the Bengal A74T variant in *MYBPC3*. Blood serum proteomics by MALDI-TOF and LC-MS/MS identified 269 differentially expressed proteins, including upregulation of integrin subunit alpha M (ITGAM) and fibrillin 2 (FBN2), and downregulation of proteins regulating cardiac fibrosis and transcription. Pathway analysis implicated the Ras and PI3K-Akt signalling pathways, consistent with hypertrophic remodelling.
 
-    - **What we learned:** BNP and troponin are elevated in plasma; sarcomere proteins are mislocalised; phosphorylation patterns on contractile proteins are abnormal, with functional implications for myocardial force generation.
-    - **What we still don't know:** what those protein-level changes mean for the heart's real-time metabolic and energetic state — the question the next layer is positioned to answer.
+    - **What we learned:** the serum proteome distinguishes symptomatic HCM cats from healthy cats and identifies dysregulated pathways downstream of sarcomere dysfunction.
+    - **What we still don't know:** serum proteomics reflects circulating protein changes, not sarcomere composition directly. To determine whether truncated MYBPC3 is incorporated into the sarcomere, or how contractile protein stoichiometry is altered, cardiac tissue proteomics would be required.
 
 ---
 
@@ -238,12 +243,12 @@ pathology, a consequence of it, or a compensatory response.
 
 ??? note "The metabolome in our research question"
 
-    Measuring the metabolome gives us the failing heart's real-time biochemical state. A hallmark of heart failure is a substrate switch: the healthy adult heart derives approximately 70% of its ATP from fatty acid oxidation, but the failing heart shifts progressively toward glucose oxidation as mitochondrial function declines and energetic demand outstrips supply. 
-    
-    This fuel shift is directly detectable in tissue or plasma metabolite profiles. Reduced acylcarnitines reflecting decreased fatty acid oxidation, altered TCA cycle intermediates, and changes in lactate and ketone body concentrations, and represents the integrated physiological consequence of the changes identified across all previous layers: the inherited variant, the altered chromatin state, the dysregulated transcripts, and the dysfunctional protein complement, all converging on a measurable shift in cardiac fuel metabolism.
+    In HCM, the metabolome captures the downstream energetic and biochemical consequences of sarcomere dysfunction: shifts in fatty acid and energy metabolism, TCA cycle perturbation, altered glutathione homeostasis, and oxidative stress.
 
-    - **What we learned:** the failing hearts have shifted from fatty acid to glucose oxidation, with metabolite profiles consistent with mitochondrial energetic impairment.
-    - **What we still don't know:** whether the metabolic shift is driving disease progression or is a downstream consequence of structural and functional changes identified at earlier layers and which intervention point would be most effective to target.
+    [Li et al. (2024)](https://pmc.ncbi.nlm.nih.gov/articles/PMC11911622/) profiled 1,253 metabolites in plasma from 83 cats across four HCM stages identifying 167 metabolites that differed significantly between experimental groups, with changes tracking disease progression from preclinical to symptomatic disease.
+
+    - **What we learned:** the metabolome distinguishes HCM cats from healthy cats at preclinical stages, before clinical signs appear, and tracks disease severity across the progression from subclinical to heart failure.
+    - **What we still don't know:** the metabolome integrates the output of every upstream layer, it cannot tell us whether the metabolic changes are driven by the sarcomere variant, transcriptional remodelling, protein dysfunction, or haemodynamic load. Disentangling cause from consequence requires data from the layers above.
 
 ---
 
