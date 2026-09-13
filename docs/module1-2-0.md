@@ -21,10 +21,10 @@ Each stage of the workflow introduces decisions that shape what is possible down
 | **Design** | Cohort design and confounding | How sample selection and group composition affect whether the biological comparison of interest can be made cleanly |
 | **Design** | Platform selection | Whether the chosen measurement technology can capture the biological signal the question requires |
 | **Design** | Statistical power | Whether the sample size is sufficient to detect effects of the expected magnitude |
-| **Data acquisition** | Batch effects | How systematic technical differences between processing runs can introduce variation that resembles or masks biological signal |
+| **Data acquisition** | Batch effects | How systematic technical artefacts can introduce variation that resembles or masks biological signal |
 | **Data acquisition** | Experimental controls | How negative controls, positive controls, spike-ins, and technical replicates allow the measurement process to be evaluated |
 | **Pre-processing** | Data quality and cleaning | How raw data are evaluated, filtered, and normalised before analysis, and how those decisions affect what enters downstream steps |
-| **Analysis** | Analytical controls | How computational approaches — decoy databases, permutation tests — can assess whether results are more extreme than expected by chance |
+| **Analysis** | Analytical controls | How computational approaches can assess whether results are more extreme than expected by chance |
 | **Analysis** | Pseudoreplication | How treating non-independent observations as independent replicates inflates confidence in results |
 | **Reporting** | Metadata completeness | Whether enough contextual information is recorded and reported for others to interpret, reproduce, or build on the work |
 | **Reporting** | Discovery without validation | How exploratory findings should be framed, and what forms of validation are needed before a result can be treated as established |
