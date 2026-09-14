@@ -81,7 +81,7 @@ Missingness is the absence of a measured value for a feature in one or more samp
 | **True absence** | Taxon not present in sample | Treat as structural zero; imputation is not appropriate |
 | **Below detection limit** | Protein below quantification threshold | Platform- and question-dependent; may be imputed or excluded |
 | **Random technical failure** | Isolated instrument drop-out | Distinguish from structured patterns before imputing |
-| **Structured missingness** | Feature absent in all samples from one condition | Investigate before imputing — may reflect biology, detection limits, or batch |
+| **Structured missingness** | Feature absent in all samples from one condition | Investigate before imputing as it may reflect biology, detection limits, or batch |
 
 The proportion of missingness also matters. A feature missing in the majority of samples in one group cannot be reliably estimated from the few values that remain. Whether it should be imputed, treated as absent, or excluded depends on the platform and the question, but the decision should be explicit and documented.
 
@@ -91,9 +91,21 @@ The proportion of missingness also matters. A feature missing in the majority of
 
 Reconstruction infers the original biological sequence or structure from cleaned reads or signals. For sequence-based platforms, this typically means mapping reads to a reference genome or transcriptome, or assembling them de novo. For mass spectrometry-based platforms, it involves matching spectra to a protein sequence or metabolite spectral library. For microbiome data, it involves clustering sequences into operational taxonomic units or resolving amplicon sequence variants.
 
-The reference used at this stage has significant downstream consequences. An outdated genome annotation may miss recently characterised genes or assign reads to incorrect loci. A protein database that excludes a taxon or isoform will not identify peptides from it. A spectral library built from a different matrix or instrument type may fail to annotate signals that are present. Where no suitable reference exists, de novo assembly or untargeted annotation introduces additional uncertainty in feature identity.
+Three inputs shape what reconstruction produces: 
 
-Reference version, build, and source should be recorded as part of the analysis provenance. Results obtained with different references are not directly comparable.
+1. Reference data: 
+2. Methods and statistical models
+3. Tool parameters 
+
+The **reference data** determines what can be identified. An outdated genome annotation may miss recently characterised genes or assign reads to incorrect loci. A protein database that excludes a taxon or isoform will not identify peptides from it. A spectral library built from a different matrix or instrument type may fail to annotate signals that are present. Where no suitable reference exists, de novo assembly or untargeted annotation introduces additional uncertainty in feature identity.
+
+The **methods** determines how signal is translated into features. Reference-guided alignment, de novo assembly, spectral matching, and sequence clustering make different assumptions and are not interchangeable. Applying an inappropriate method — or one not validated for the platform or sample type — can cause features to be merged, split, or missed entirely.
+
+**Parameters** determine where boundaries are drawn. Similarity thresholds, minimum alignment scores, clustering cutoffs, and mass tolerances all affect which signals are resolved into discrete features and which are discarded. These thresholds are often set to software defaults that were not calibrated for a specific platform, sample type, or biological question.
+
+!!! warning "Remember to record your choices" 
+
+    Reference version, build, and source should be recorded as part of the analysis provenance, alongside the method and key parameters. Results obtained with different references or methods are not directly comparable without acknowledgement of their technical differences.
 
 ---
 
