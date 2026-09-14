@@ -1,14 +1,34 @@
-site_name: template-mkdocs
-repo_url: https://github.com/Sydney-Informatics-Hub/template-mkdocs
-repo_name: Sydney-Informatics-Hub/template-mkdocs
+site_name: BIO101 - Foundations of omics study design
+repo_url: https://github.com/Sydney-Informatics-Hub/bio101-workshop
+repo_name: Sydney-Informatics-Hub/bio101-workshop
 
 nav:
   # Landing page
-  - Home: index.md 
-  - Module 3:
-    - Introduction: module03/module03-0.md
-    - Diagnostic toolkit: module03/module03-1.md
-    - Case studies: module03/module03-2.md
+  - Home: index.md
+  - Module 1: 
+    - Module 1.1 Omics landscape: module1-1.md
+    - Module 1.2 Experimental workflow: 
+      - 1.2.0 Overview: module1-2-0.md
+      - 1.2.1 - Design: module1-2-1.md
+      - 1.2.2 - Data acquisition: module1-2-2.md
+      - 1.2.3 - Preprocessing: module1-2-3.md
+      - 1.2.4 - Analysis: module1-2-4.md
+      - 1.2.5 - Reporting: module1-2-5.md
+      - 1.2.6 - Activity: module1-2-6.md
+  - Module 2: 
+      - Overview: module2-0.md
+      - Module 2.1 Accuracy and interpretability:
+          - 2.1.1 Choosing a platform: module2-1-1.md
+          - 2.1.2 Confounding and batch: module2-1-2.md
+          - 2.1.3 Measurement and metadata: module2-1-3.md
+      - Module 2.2 Power and cost:
+          - 2.2.1 Sample size: module2-2-1.md
+          - 2.2.2 Design decision costs: module2-2-2.md
+      - Module 2.3 Generalisability:
+          - 2.3.1 Who the findings apply to: module2-3-1.md
+      - Module 2.4 Design decisions in practice: module2-4-0.md
+  - Module 3: module3.md
+  - Further reading: further-reading.md
 
 theme:
   name: material
@@ -16,6 +36,8 @@ theme:
   features:
     - navigation.footer
     - content.code.copy
+    - navigation.tabs          
+    - navigation.tabs.sticky   
   palette:
     - scheme: default
       primary: custom
@@ -42,8 +64,14 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.superfences
+  - toc:
+      toc_depth: 3
 
 extra:
   analytics:
     provider: google
     property: G-TNWWV3HK57
+
+copyright: >
+  © 2026 Copyright (c) 2025 Sydney Informatics Hub, University of Sydney.
+  <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a>
