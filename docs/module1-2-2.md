@@ -17,7 +17,8 @@ The two paths are not mutually exclusive. A common and well-powered design can u
 | **Key risk** | Batches that align with your biological comparison e.g. cases processed in year one and controls in year three | Using a public dataset to supply one arm of a comparison e.g. disease and study become perfectly confounded |
 | **Key advantage** | You choose which samples go into which batch, the fix is available before any processing begins | Excellent as an independent validation cohort, or when each dataset contributes both comparison groups |
 
-
+!!! warning "Data acquisition technologies are covered in Module 2"
+    This module addresses decisions made during data acquisition including batch structure, controls, and the implications of generating versus reusing data. It does not cover how specific platforms work: how a sequencer converts nucleic acids to base calls, how a mass spectrometer measures peptide or metabolite mass-to-charge ratios, or how signal is processed into a digital readout. Those mechanisms, along with platform-specific considerations, are covered in Module 2.
 
 ## Path A: generate your own data
 
@@ -68,8 +69,8 @@ None of these methods can recover signal from a design where batch is fully conf
 
 ??? example "Case Study: When unreproducible analysis reaches the clinic"
 
-    Researchers at Duke published a 
-    series of high profile papers claiming to have developed gene expression based 
+    Researchers at Duke University published a series of high profile papers claiming to have 
+    developed gene expression based 
     predictors of chemotherapy response in cancer patients using gene 
     expression microarrays. Three clinical trials were opened using these 
     predictors to assign patients to treatment arms.
