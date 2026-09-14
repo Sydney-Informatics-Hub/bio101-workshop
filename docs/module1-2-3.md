@@ -2,9 +2,11 @@
 
 Once molecular data is translated into a digital form by a sequencer or mass spectrometer, it undergoes a series of computational processing steps to prepare it for analysis. The data are processed using computational and statistical methods to evaluate data quality, identify and quantify features, and reduce technical variation before addressing the biological question. Not every step will apply to every platform and the order of pre-processing steps and choice of methods matters.
 
+Pre-processing moves raw instrument output through four sequential stages, all of which can be revisited iteratively as problems are identified. **Quality control** evaluates every sample and feature against technical thresholds; observations that fail are either re-evaluated after cleaning or excluded from downstream analysis. **Data cleaning** removes low-quality signals, artefacts, and noise. Samples that fail cleaning do not advance further. **Reconstruction** and **feature identification** translate the cleaned signal into biologically interpretable units. Both stages may require external reference files: a genome assembly, gene annotation, protein sequence database, spectral library, or taxonomic reference. 
+
 ![](figs/1-2_preprocess.png)
 
-Additionally, these decisions are not neutral. A filtering threshold determines which features enter downstream analysis; excluded features can be recovered only by repeating preprocessing from retained raw or intermediate data. A normalisation method based on assumptions that do not hold can distort downstream comparisons, while an imputation strategy that ignores why values are missing can introduce bias. The choice of genome assembly, gene annotation or protein database determines which features the pipeline can identify. Reads or signals that do not match the selected reference will not contribute to that analysis, although they may be recovered by reprocessing with another reference or method.
+Additionally, these decisions are not neutral. A filtering threshold applied at either the data cleaning or reconstruction phase determines which features enter downstream analysis. Excluded features can be recovered only by repeating preprocessing from retained raw or intermediate data. A normalisation method based on assumptions that do not hold can distort downstream comparisons, while an imputation strategy that ignores why values are missing can introduce bias. The choice of genome assembly, gene annotation or protein database determines which features the pipeline can identify. Reads or signals that do not match the selected reference will not contribute to that analysis, although they may be recovered by reprocessing with another reference or method.
 
 Across platforms, preprocessing commonly involves four broad types of task:
 
@@ -87,7 +89,7 @@ Some normalisation strategies assume that most features are unchanged between co
 
 --- 
 
-!!! info "Stage C takeaways"
+!!! info "Module 1.2.3 takeaways"
     - Preprocessing transforms raw instrument output into a form suitable for analysis. The steps involved vary by platform, and the order and choice of methods affect what information enters the analysis.
     - QC should assess sample quality, run or instrument performance, and feature-level detection. QC criteria should be planned where possible, applied consistently and documented.
     - Filtering removes low-quality or low-prevalence features, but low abundance does not mean biologically unimportant. Thresholds should reflect the biological question, not pipeline defaults.
