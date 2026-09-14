@@ -32,6 +32,9 @@ Methods reporting describes what was done computationally: which tools were used
 
 Together, complete metadata and methods reporting are what allow others to interpret, reproduce, and build on a study.
 
+!!! question "Discussion: what are you recording?"
+    What metadata does your study capture systematically, and what relies on memory or informal notes? If a collaborator needed to reproduce your preprocessing pipeline from your methods section alone, what would they be missing?
+
 --- 
 
 ## Consideration 9: Metadata completeness
@@ -84,6 +87,9 @@ Different forms of validation address different questions:
 - **Functional validation:** Does experimentally changing the proposed biological component produce the predicted response?  
 
 Orthogonal validation on the same samples can strengthen confidence in the measurement, but it does not establish generalisability. Independent replication does not, by itself, establish a mechanism.
+
+!!! question "Discussion: what can your study claim?"
+    Given your sample size, cohort, and platform, which of the three claim types in the table above fits your study? What would independent replication of your findings require — a different cohort, a different platform, a different species or condition? Is that feasible, and if not, how should that constrain your conclusions?
 
 The challenges of reproducibility and validation are documented across platforms. In transcriptomics, gene signatures derived from small or heterogeneous cohorts frequently show limited reproducibility across independent datasets of the same disease. In metabolomics, an analysis of 244 human serum studies investigating cancer biomarkers found that 72% of the metabolites reported as statistically significant were reported by only one study. In proteomics, translating biomarker discoveries into clinical use remains challenging, with standardisation and validation continuing to be discussed as barriers nearly two decades after [Rifai et al. (2006)](https://doi.org/10.1038/nbt1235) highlighted them.
 

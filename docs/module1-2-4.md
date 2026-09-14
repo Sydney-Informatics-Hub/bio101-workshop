@@ -29,6 +29,9 @@ Translating feature-level statistical results into biological processes, through
 
 ![](figs/1-2_confirmexplore.png)
 
+!!! question "Discussion: statistical vs biological significance"
+    Think about a result from your own work that was statistically significant. How did you determine whether it was also biologically meaningful? What criteria did you use to make that call?
+
 ## Consideration 7: Controlling for false positives
 
 !!! danger "Design principle"
@@ -90,7 +93,10 @@ Two design choices require particular care when counting independent replicates:
 
 Neither subsampling nor pooling is inherently a mistake. Pseudoreplication occurs when subsamples are treated as independent biological replicates, or when donors contributing to a pool are counted as separately measured replicates. This can overstate confidence in the results. Dependence between subsamples can often be handled in the analysis, but pooling generally prevents direct assessment of individual differences.
 
-!!! info "Multiplexing is not pooling"
+!!! question "Discussion: counting your independent replicates"
+    What is the experimental unit in your study? Are there any measurements that come from the same biological unit? How does your analysis currently handle that dependence?
+
+??? info "Multiplexing is not pooling"
     Multiplexing combines separately barcoded libraries onto the same sequencing run for efficiency. Demultiplexing recovers separate library measurements; whether these represent independent biological replicates depends on the study design. Samples from ten independent patients run together on one lane still represent ten independent biological units. Pooling biological material generally prevents separate measurement of individual contributions, unless these remain distinguishable through genetic differences or other identifiers.
 
 ![](figs/1-2_pseudoreplication.jpg)

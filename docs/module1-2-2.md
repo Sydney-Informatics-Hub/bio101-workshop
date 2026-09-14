@@ -17,7 +17,15 @@ The two paths are not mutually exclusive. A common and well-powered design can u
 | **Key risk** | Batches that align with your biological comparison e.g. cases processed in year one and controls in year three | Using a public dataset to supply one arm of a comparison e.g. disease and study become perfectly confounded |
 | **Key advantage** | You choose which samples go into which batch, the fix is available before any processing begins | Excellent as an independent validation cohort, or when each dataset contributes both comparison groups |
 
-!!! warning "Data acquisition technologies are covered in Module 2"
+!!! question "Discussion: Which path is your study on?"
+
+    1. **Is your study on Path A, Path B, or a combination?** If Path B or a combination, what do you know about how the existing data was generated — batch structure, instrument, protocol, pipeline?
+
+    2. **What is fixed about your data acquisition that cannot be changed?** If you are still at the design stage, what decisions can you still make?
+
+    3. **If you are combining your own data with an existing dataset, does each dataset contribute samples from both comparison groups?** If not, what does that mean for your conclusions?
+
+??? warning "Data acquisition technologies are covered in Module 2"
     This module addresses decisions made during data acquisition including batch structure, controls, and the implications of generating versus reusing data. It does not cover how specific platforms work: how a sequencer converts nucleic acids to base calls, how a mass spectrometer measures peptide or metabolite mass-to-charge ratios, or how signal is processed into a digital readout. Those mechanisms, along with platform-specific considerations, are covered in Module 2.
 
 ## Path A: generate your own data
@@ -86,6 +94,14 @@ None of these methods can recover signal from a design where batch is fully conf
     ***Outcome***: The clinical trials were subsequently halted amid concerns about the validity of the predictors. The case became an important example of how poor documentation and data-processing errors can undermine reproducibility and potentially place patients at risk.
     <small>Ref: [Baggerly & Coombes, *Ann. Appl. Stat.* 2009](https://doi.org/10.1214/09-AOAS291){target="_blank"}</small>
 
+!!! question "Discussion: Batch structure in your study"
+
+    1. **How many batches does your study have, and what defines them?** What are they?
+
+    2. **Do your comparison groups appear in every batch, or is any group concentrated in one batch?** If batch and biology align even partially, which differences in your data are attributable to biology and which to processing?
+
+    3. **If batch effects are present, can they be modelled?** What would need to be true about your metadata for that to be possible?
+
 ---
 
 ## Consideration 5: Experimental controls
@@ -118,6 +134,14 @@ Some platforms have additional platform-specific controls that address particula
 | Epigenome | Bisulfite-based DNA methylation assay | Bisulfite conversion-efficiency control | Incomplete conversion, which inflates apparent methylation |
 
 The appropriate controls for a given study depend on the platform, the sample type, and the expected sources of technical variability. They should be identified before the relevant processing or acquisition step and included in the study budget. Their placement should follow their purpose: experimental samples may be randomised, whereas pooled QC samples are commonly placed at regular intervals and blanks may be positioned strategically to detect contamination or carryover.
+
+!!! question "Discussion: Controls in your study"
+
+    1. **What controls were included in your experiment?** For each one, what source of technical failure was it designed to detect?
+
+    2. **Are there controls your platform typically requires that were not included?** If so, what does that mean for your ability to distinguish biology from technical artefact?
+
+    3. **Were your controls introduced at the right point in the workflow?** A control added after extraction does not capture extraction variability.
 
 ---
 

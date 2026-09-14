@@ -93,6 +93,16 @@ Approaches for managing confounders are covered in [Module 2: Confounding](). No
     <small>Oliva et al. *Science* 369, eaba3066 (2020). [doi:10.1126/science.aba3066](https://doi.org/10.1126/science.aba3066){target="_blank"}</small>
 
     <small>National Institutes of Health. *Consideration of Sex as a Biological Variable in NIH-funded Research* (2015; effective 2016). [NOT-OD-15-102](https://grants.nih.gov/grants/guide/notice-files/not-od-15-102.html){target="_blank"}</small>
+
+!!! question "Discussion: Cohort design in your study"
+
+    Think about the comparison your study is designed to make.
+
+    1. **Do your comparison groups differ in any way unrelated to the biological question?** Consider how samples were recruited, collected, and processed.
+
+    2. **Which of those differences are recorded in your metadata, and which are not?** A variable that is not recorded cannot be evaluated or accounted for during analysis.
+
+    3. **If you are using an existing dataset as one arm of your comparison, what do you know about how it was generated?** What do you not know?
 ---
 
 ## Consideration 2: Platform selection

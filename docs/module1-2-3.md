@@ -64,6 +64,14 @@ Raw data always contains observations of variable quality. Quality control is th
 
 QC metrics should be interpreted together and in the context of the biological reality of your experiment as well as the platform, sample type, controls, and overall data distribution. Comparisons across samples also require consistent acquisition and processing settings. For example, protein-identification counts are comparable only when the same acquisition mode, database-search settings, and identification thresholds were used. QC should be revisited after major filtering or normalisation steps.
 
+!!! question "Discussion: Missingness in your study"
+
+    1. **Does your dataset have missing values?** For each feature or sample with missing data, do you know why the value is absent? Can you say whether it is truely absent, below detection limit, or technical failure?
+
+    2. **Is the missingness structured?** If a feature is consistently missing in one condition and present in another, imputing it may obscure a biological pattern rather than recover a technical one.
+
+    3. **What filtering thresholds were applied, and what did they remove?** Could any of the excluded features be biologically relevant to your question?
+
 ---
 
 ### Data filtering
@@ -84,6 +92,14 @@ Missingness is the absence of a measured value for a feature in one or more samp
 | **Structured missingness** | Feature absent in all samples from one condition | Investigate before imputing as it may reflect biology, detection limits, or batch |
 
 The proportion of missingness also matters. A feature missing in the majority of samples in one group cannot be reliably estimated from the few values that remain. Whether it should be imputed, treated as absent, or excluded depends on the platform and the question, but the decision should be explicit and documented.
+
+!!! question "Discussion: Missingness in your study"
+
+    1. **Does your dataset have missing values?** For each feature or sample with missing data, do you know why the value is absent — true absence, below detection limit, or technical failure?
+
+    2. **Is the missingness structured?** If a feature is consistently missing in one condition and present in another, imputing it may obscure a biological pattern rather than recover a technical one.
+
+    3. **What filtering thresholds were applied, and what did they remove?** Could any of the excluded features be biologically relevant to your question?
 
 ---
 
@@ -106,6 +122,14 @@ The **methods** determines how signal is translated into features. Reference-gui
 !!! warning "Remember to record your choices" 
 
     Reference version, build, and source should be recorded as part of the analysis provenance, alongside the method and key parameters. Results obtained with different references or methods are not directly comparable without acknowledgement of their technical differences.
+
+!!! question "Discussion: Reference data and parameters in your study"
+
+    1. **Which reference genome, annotation, protein database, or spectral library did your pipeline use?** Do you have the version, build, and source recorded?
+
+    2. **Were the key parameters at each reconstruction step set deliberately, or left at software defaults?** Were those defaults appropriate for your platform, sample type, and biological question?
+
+    3. **If you ran the same data through a different reference version or with different parameters, would you expect the same features to be identified?** What does that mean for the reproducibility of your results?
 
 ---
 
