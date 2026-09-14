@@ -1,45 +1,46 @@
-# template-mkdocs
+# BIO101 - Design foundations for omics studies
 
-## Setup
+Omics technologies are now routine tools across the life sciences. Most omics training focuses on downstream data analysis, how to process sequencing data, perform differential expression analysis, or use specialized software. While these skills are essential, they often come too late. Many of the factors that determine whether an omics study produces meaningful, interpretable results are decided before a single sample is processed.
 
-- Create new repository using this as a template
+In this workshop, you will learn the basics of study design for bioinformatics-based research. Through real world examples, you’ll explore the main omics data types and how they differ from conventional biological data, identify key decision-making steps during a full experimental workflow, and show how decisions at each stage propagate into your results. Working through these principles, you will be better equipped to design robust bioinformatics experiments, critically evaluate the design of others, and avoid the mistakes that downstream analyses cannot fully fix.
 
-- In the cloned repository: Settings -> Pages -> Build and deployment:
+## Event details 
 
-    - Source: Deploy from a branch
-    - Branch: `gh-pages`
-    - Folder: `/ (root)`
+See the [Eventbrite](https://www.eventbrite.com.au/e/bioinformatics-workshop-design-foundations-for-omics-studies-tickets-1993800834969?aff=oddtdtcreator) page for event registration details. 
 
-- Set up `mkdocs` locally
+## Developers 
 
-Using `mamba`:
+- Amarinder Thind 
+- Georgie Samaha 
+- Fred Jaya 
+- Mitchell O'Brien
 
-```bash
-mamba create -n mkdocs -c conda-forge mkdocs-material
-mamba activate mkdocs
+## Format
+
+This is a full-day, in-person only, interactive workshop combining short presentations, real-world case studies, group discussions, and hands-on activities. It will be held in Room 503 Moore College (CG2), 1 King Street, Newtown, NSW, 2042.
+
+Who the workshop is for: This workshop is aimed at those coming to bioinformatics from a clinical or biology background who are comfortable with biology but new to design and statistical thinking required for omics data analysis. No prior bioinformatics, coding, or statistics experience is required.
+
+## Prerequisites
+
+- A basic understanding of biological research concepts
+- Participants should bring a laptop for browser-based practical activities (no software installation required)
+
+## For developers 
+
+To render docs: 
+
+1. Install mkdocs
+
+```
+pip install mkdocs
+mkdocs --version # confirm install
 ```
 
-```console
-.
-├── docs # all contents for pages here
-│   ├── assets
-│   │   └── usyd-logo.png
-│   ├── extra.css # usyd styling
-│   └── index.md # home page
-├── .github # GH action to auto publish when pushed to main
-│   └── workflows
-│       └── mkdocs_deploy.yml
-├── mkdocs.yml # config for extensions, contents/navbar, etc.
-└── README.md
+2. Render docs locally at http://127.0.0.1:8000/: 
+
 ```
-
-## Usage
-
-To preview changes in your browser:
-
-```bash
-# mamba activate mkdocs
 mkdocs serve
 ```
 
-All pushes to main will render the content and publish to github pages automatically.
+All content merged to main will be rendered at github.io pages by [`.github/workflows/mkdocs_deploy.yml`](.github/workflows/mkdocs_deploy.yml) github action.

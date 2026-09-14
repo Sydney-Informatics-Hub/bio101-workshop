@@ -5,11 +5,10 @@ repo_name: Sydney-Informatics-Hub/template-mkdocs
 nav:
   # Landing page
   - Home: index.md 
-  # Example top-level page
-  #- Setup: setup.md
-  # Example nested page
-  # - Part 1:
-  #   - Introduction: part1/intro.md
+  - Module 3:
+    - Introduction: module03/module03-0.md
+    - Diagnostic toolkit: module03/module03-1.md
+    - Case studies: module03/module03-2.md
 
 theme:
   name: material
