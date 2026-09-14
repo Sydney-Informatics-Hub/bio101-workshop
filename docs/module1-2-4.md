@@ -2,21 +2,39 @@
 
 Analysis is the stage at which statistical models are applied to the preprocessed datasets to test the biological question. The model must reflect the structure of the data: the types of variables, the distributional properties of the outcome, any dependencies between observations, and covariates that need to be accounted for. A model that correctly captures these properties produces estimates with appropriate uncertainty; one that does not can overstate confidence or fail to detect real effects.
 
-Analysis in omics is characterised by two challenges that require explicit design decisions. First, thousands of molecular features are tested simultaneously. Testing at this scale increases the expected number of false positives proportionally — at p < 0.05 across 20,000 features, approximately 1,000 significant results are expected by chance alone. Multiple-testing correction reduces this risk but does not eliminate it; computational approaches such as permutation testing can further assess how extreme the observed results are relative to chance. Second, observations in omics data are frequently not independent: cells from the same donor, repeated measurements from the same individual, or subsamples from the same tissue share a common biological background. Treating them as independent replicates inflates the effective sample size and overstates confidence in the results.
+Covariates are variables associated with the outcome but not the biological question of interest, such as age, sex, or batch. They must be identified before analysis. A model that omits a confounding variable can produce associations that reflect the confounder rather than the biology.
 
-Both of these are addressed directly in the considerations below.
+## Challenges at scale 
 
-## Consideration 7: Experimental and analytical controls
+Analysis in omics is characterised by two challenges that require explicit design decisions.
+
+1. **Thousands of molecular features tested simultaneously.** Testing at this scale increases the expected number of false positives proportionally. Multiple-testing correction reduces this risk but does not eliminate it; computational approaches such as permutation testing can further assess how extreme the observed results are relative to chance.
+
+2. **Observations in omics data are frequently not independent:** cells from the same donor, repeated measurements from the same individual, or subsamples from the same tissue share a common biological background. Treating them as independent replicates inflates the effective sample size and overstates confidence in the results.
+
+## Interpreting results
+
+Statistical significance and biological relevance are not the same. A result can be statistically significant while representing a difference too small to be biologically meaningful. Conversely, a biologically important effect may not reach significance in an underpowered study. Effect sizes, confidence intervals, and measures of practical relevance should be reported and interpreted alongside p-values.
+
+| | **Statistically significant** | **Not significant** |
+|---|---|---|
+| **Biologically relevant** | **Finding**: result warrants a conclusion | **Missed effect?**: may reflect insufficient power; check effect size and confidence interval |
+| **Not biologically relevant** | **False positive or trivial difference**: passes the threshold; does not support a biological conclusion | **True negative**: no effect detected; consistent result |
+
+Analysis in omics can be hypothesis-confirming or hypothesis-generating (exploratory), and the interpretation should match. A hypothesis-confirming analysis tests a pre-specified hypothesis in a defined dataset; its results are conclusions. An exploratory analysis screens a large feature space for candidates; its results are hypotheses. Treating exploratory findings as conclusions without independent replication is a common source of non-reproducible results. The distinction should be decided before analysis begins, not after results are seen.
+
+Translating feature-level statistical results into biological processes, through pathway analysis, gene set enrichment, or similar approaches, is a separate analytical step with its own assumptions. The choice of background set, the handling of overlapping pathways, and multiple testing across pathway sets all affect the output. These methods summarise and contextualise results; they do not validate them.
+
+![](figs/1-2_confirmexplore.png)
+
+## Consideration 7: Analytical controls and multiple testing
 
 !!! danger "Design principle"
+    Testing thousands of features simultaneously increases the expected number of false positives proportionally. Computational approaches can assess whether results are more extreme than expected by chance, but they cannot compensate for missing experimental controls or data that were never collected.
 
-    Experimental controls help assess the measurement process. Analytical controls help assess the reliability of the analysis. Both are needed as analytical controls cannot reliably replace missing experimental controls.
+Omics experiments test large numbers of features simultaneously. At a significance threshold of p < 0.05, one in twenty tested features is expected to appear significant by chance alone. Depending on the platform and study design, this can mean hundreds to thousands of false positives in a single analysis. Multiple-testing correction reduces this risk by adjusting the threshold at which results are considered significant, accounting for the number of tests performed.
 
-Analytical controls are not a substitute for experimental controls. Where experimental controls (negative controls, spike-ins, technical replicates) assess whether the measurement process itself was reliable, computational controls can be used to assess whether analytical results are more extreme than expected by chance, or whether identifications meet a minimum confidence threshold.
-
-In proteomics, decoy databases (constructed from reversed or randomised protein sequences) are searched alongside the real database. Because a match to a decoy sequence cannot be biologically real, the rate at which decoys are matched gives an empirical estimate of the false discovery rate among the real identifications. 
-
-Permutation tests assess how unusual the observed result would be if there were no association between the groups and the measurements. They rearrange group labels and repeat the analysis to see how often a result at least as extreme occurs. The rearrangement must respect the study design, including pairing or repeated measurements.
+Permutation tests provide a complementary approach. By repeatedly rearranging group labels and re-running the analysis, they generate a null distribution of results expected under no association. The observed results can then be assessed against this distribution. The rearrangement must respect the study design, including any pairing or repeated measurements. A permutation that breaks the design structure does not produce a valid null.
 
 ??? example "Case study: The placental microbiome"
 
@@ -32,17 +50,11 @@ Permutation tests assess how unusual the observed result would be if there were 
     present: occasional pathogens are different from a resident microbial
     community.
 
-    **Why experimental controls matter**
-
-    A negative extraction control contains no tissue but passes through the
-    same extraction workflow as the samples. Bacterial DNA detected in these
-    controls helps identify contamination from reagents or processing.
-    Comparing samples with controls helps assess whether the signal supports
-    a biological interpretation.
-
-    This illustrates a limit of computational analysis: detecting bacterial
-    sequences does not, by itself, establish that those bacteria originated
-    in the tissue.
+    This case illustrates a limit of computational analysis: detecting
+    sequences does not, by itself, establish that those sequences originated
+    in the tissue. Assessing that requires experimental controls — negative
+    extraction controls, reagent blanks — introduced before processing. No
+    analytical approach can reconstruct what those controls would have shown.
 
     <small>
     de Goffau MC et al. Human placenta has no microbiome but can contain
@@ -55,12 +67,10 @@ Permutation tests assess how unusual the observed result would be if there were 
     [doi:10.1186/s12915-014-0087-z](https://link.springer.com/article/10.1186/s12915-014-0087-z){target="_blank"}
     </small>
 
-!!! danger "What analysis cannot fix"
+!!! danger "Analytical controls cannot replace missing data"
 
-    Analysis cannot reliably compensate for missing experimental controls or
-    essential information that was never collected. Sometimes the impact can
-    be assessed or partially mitigated, but resolving the uncertainty may
-    require additional measurements or a new experiment.
+    Analytical controls assess whether results are more extreme than expected by chance. They cannot compensate for missing experimental controls or essential information that was never collected. Sometimes the impact can be assessed or partially mitigated, but resolving the uncertainty may require additional measurements or a new experiment.
+
 ---
 
 ## Consideration 8: Independent replication and pseudoreplication
