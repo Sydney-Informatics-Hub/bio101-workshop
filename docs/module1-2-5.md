@@ -1,6 +1,6 @@
 # Module 1.2.5 Reporting
 
-The reporting stage is where findings are communicated, in publications, preprints, data repositories, and supplementary materials. It is also where many studies fail to provide the information that would allow others to evaluate, reproduce, or build on the work. A technically sound study with poorly documented methods, incomplete metadata, or overclaimed conclusions contributes less to the scientific record than its data would otherwise allow.
+The reporting stage is where findings are communicated, in publications, preprints, code and repositories, and supplementary materials. It is also where many studies fail to provide the information that would allow others to evaluate, reproduce, or build on the work. A technically sound study with poorly documented methods, incomplete metadata, or overclaimed conclusions contributes less to the scientific record than its data would otherwise allow.
 
 Two problems are particularly common in omics reporting: 
 
@@ -15,6 +15,24 @@ Two problems are particularly common in omics reporting:
     | **Confirmatory analysis** | Analysis designed to test a hypothesis specified before examining the relevant results, using a prespecified analysis plan |
     | **Independent cohort replication** | Testing whether a finding holds in new, independent biological samples; the measurement platform may be the same or different |
     | **Orthogonal validation** | Confirming a finding using a different measurement technology,e.g. validating an RNA-seq result with RT-qPCR, or a proteomics finding with immunohistochemistry |
+
+## What to report
+
+### Metadata
+
+Metadata is the contextual information that makes a dataset interpretable: which biological samples were studied, how they were collected, what processing conditions they were exposed to, and what technical factors could have influenced the measurements. Without it, a dataset cannot be evaluated for sources of variation, and findings cannot be placed in their biological context.
+
+![](figs/1-2_metadata.png)
+
+### Methods
+
+Methods reporting describes what was done computationally: which tools were used, which versions, which reference databases or assemblies, and which parameters were applied at each step. Omics analyses involve many sequential decisions in preprocessing, normalisation, and statistical modelling. The output can differ substantially depending on your choices at each step. A methods section that names a tool without specifying its version or parameters does not allow the analysis to be reproduced, and does not allow others to assess whether the choices were appropriate for the data.
+
+![](figs/1-2_methods.png)
+
+Together, complete metadata and methods reporting are what allow others to interpret, reproduce, and build on a study.
+
+--- 
 
 ## Consideration 9: Metadata completeness
 
@@ -34,15 +52,15 @@ Missing metadata can make it difficult to distinguish the biological relationshi
 | Missing metadata | Platform | Consequence |
 |---|---|---|
 | Fasting status | Metabolomics | Group differences may reflect diet rather than biology |
-| Ischaemia time | Any (tissue studies) | Degradation artefacts mistaken for disease effects |
-| Processing date / batch | Any | Batch effects present but unidentifiable and uncorrectable |
+| Ischaemia time | Proteomics | Degradation artefacts mistaken for disease effects |
+| Processing date | Any | Batch effects present but unidentifiable and uncorrectable |
 | RNA integrity score | Transcriptomics | Degraded samples cannot be flagged or excluded retrospectively |
 | Reagent lot number | Any | Lot-to-lot variation cannot be accounted for in analysis |
 
 It is good practice to report, what information is missing, which limitations this creates, and how those limitations affect the conclusions.
 
 ??? example "Case study: When metadata saves the analysis"
-    ![](figs_m1/01_metadata_casestudy_v01.png){width=100%}
+    ![](figs/1-2_metadata_casestudy.png){width=100%}
 
 ## Consideration 10: Discovery without validation
 
@@ -55,21 +73,19 @@ A finding may reflect the particular participants, biological context, or techni
 
 | Study type | Example claim | Validation required? |
 |---|---|---|
-| Exploratory / hypothesis generating | "We identify candidate features associated with condition X" | Not strictly, if clearly labelled as exploratory |
-| Confirmatory / mechanistic | "Gene X drives this pathway in disease Y" | Strongly recommended |
-| Translational / clinical | "This signature predicts patient outcome" | Essential |
+| Exploratory or hypothesis generating | "We identify candidate features associated with condition X" | Not strictly, if clearly labelled as exploratory |
+| Confirmatory or mechanistic | "Gene X drives this pathway in disease Y" | Strongly recommended |
+| Translational or clinical | "This signature predicts patient outcome" | Essential |
 
 Different forms of validation address different questions:  
 
-**Independent cohort replication:** Does the finding hold in new, independent biological samples?  
-**Orthogonal validation:** Does a different measurement method support the finding, for example, checking a mass-spectrometry protein measurement using an appropriate immunoassay,an RNA-seq result confirmed by RT-qPCR, a variant call confirmed by Sanger sequencing?  
-**Functional validation:** Does experimentally changing the proposed biological component produce the predicted response?  
+- **Independent cohort replication:** Does the finding hold in new, independent biological samples?  
+- **Orthogonal validation:** Does a different measurement method support the finding?  
+- **Functional validation:** Does experimentally changing the proposed biological component produce the predicted response?  
 
 Orthogonal validation on the same samples can strengthen confidence in the measurement, but it does not establish generalisability. Independent replication does not, by itself, establish a mechanism.
 
-The challenges of reproducibility and validation are documented across platforms. In transcriptomics, gene signatures derived from small or heterogeneous cohorts frequently show limited reproducibility across independent datasets of the same disease. In metabolomics, an analysis of 244 human serum studies investigating cancer biomarkers found that 72% of the metabolites reported as statistically significant were reported by only one study. In proteomics, translating biomarker discoveries into clinical use remains challenging, with standardisation and validation continuing to be discussed as barriers nearly two decades after Rifai and colleagues highlighted them in 2006.
-
-<small>[Rifai et al. *Nature Biotechnology* 2006](https://doi.org/10.1038/nbt1235){target="_blank"} · [Proceedings of the 68th Benzon Foundation Symposium. *Molecular & Cellular Proteomics* 2024](https://pmc.ncbi.nlm.nih.gov/articles/PMC11652764/){target="_blank"}</small>
+The challenges of reproducibility and validation are documented across platforms. In transcriptomics, gene signatures derived from small or heterogeneous cohorts frequently show limited reproducibility across independent datasets of the same disease. In metabolomics, an analysis of 244 human serum studies investigating cancer biomarkers found that 72% of the metabolites reported as statistically significant were reported by only one study. In proteomics, translating biomarker discoveries into clinical use remains challenging, with standardisation and validation continuing to be discussed as barriers nearly two decades after [Rifai et al. (2006)](https://doi.org/10.1038/nbt1235) highlighted them.
 
 ??? example "Case study: Two decades of unreplicable genetics, the candidate gene era"
     From the 1990s through the mid-2000s, hundreds of candidate gene association studies were published linking specific genetic variants to psychiatric and complex diseases. Many reported statistically significant associations in small samples.
@@ -82,18 +98,6 @@ The challenges of reproducibility and validation are documented across platforms
 
 ---
 
-!!! info "Can errors be fixed?"
-
-    !!! success "Recoverable: fixable at the analysis stage"
-        Normalisation method choice; some batch effects if not confounded with biology; outlier handling.
-
-    !!! warning "Limitable: partially addressable with caveats"
-        Underpowered sample sizes; platform mismatch; suboptimal QC thresholds.
-
-    !!! danger "Unrecoverable: cannot be fixed after data generation"
-        Batch fully confounded with biological groups; missing or unrecorded metadata; wrong platform chosen for the question; samples pooled where individual-level inference was needed.
-
----
 
 !!! info "Module 1.2.5 takeaways"
     - Undocumented sources of variation become permanent ambiguities in the dataset.

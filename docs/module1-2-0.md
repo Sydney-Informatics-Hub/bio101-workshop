@@ -12,7 +12,7 @@ Omics studies follow a common workflow regardless of the molecular layer being i
 
 The five stages of an omics study are set out in the figure below. Each stage carries decisions with downstream consequences; understanding what those decisions are and why they matter is the focus of this module.
 
-![](figs/1-2_workflow.png)
+![](figs/1-2_workflow.png){width="150%"}
 
 Each stage of the workflow introduces decisions that shape what is possible downstream. The ten considerations covered in this module are:
 
