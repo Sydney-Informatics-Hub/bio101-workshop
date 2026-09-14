@@ -12,6 +12,8 @@ Analysis in omics is characterised by two challenges that require explicit desig
 
 2. **Observations in omics data are frequently not independent:** cells from the same donor, repeated measurements from the same individual, or subsamples from the same tissue share a common biological background. Treating them as independent replicates inflates the effective sample size and overstates confidence in the results.
 
+![](figs/1-2_challenges.png)
+
 ## Interpreting results
 
 Statistical significance and biological relevance are not the same. A result can be statistically significant while representing a difference too small to be biologically meaningful. Conversely, a biologically important effect may not reach significance in an underpowered study. Effect sizes, confidence intervals, and measures of practical relevance should be reported and interpreted alongside p-values.
@@ -27,14 +29,16 @@ Translating feature-level statistical results into biological processes, through
 
 ![](figs/1-2_confirmexplore.png)
 
-## Consideration 7: Analytical controls and multiple testing
+## Consideration 7: Controlling for false positives
 
 !!! danger "Design principle"
     Testing thousands of features simultaneously increases the expected number of false positives proportionally. Computational approaches can assess whether results are more extreme than expected by chance, but they cannot compensate for missing experimental controls or data that were never collected.
 
-Omics experiments test large numbers of features simultaneously. At a significance threshold of p < 0.05, one in twenty tested features is expected to appear significant by chance alone. Depending on the platform and study design, this can mean hundreds to thousands of false positives in a single analysis. Multiple-testing correction reduces this risk by adjusting the threshold at which results are considered significant, accounting for the number of tests performed.
+![](figs/1-2_multipletestfix.png)
 
-Permutation tests provide a complementary approach. By repeatedly rearranging group labels and re-running the analysis, they generate a null distribution of results expected under no association. The observed results can then be assessed against this distribution. The rearrangement must respect the study design, including any pairing or repeated measurements. A permutation that breaks the design structure does not produce a valid null.
+Omics experiments test large numbers of features simultaneously. At a significance threshold of p < 0.05, one in twenty tested features is expected to appear significant by chance alone. Depending on the platform and study design, this can mean hundreds to thousands of false positives in a single analysis. **Multiple-testing correction** reduces this risk by adjusting the threshold at which results are considered significant, accounting for the number of tests performed.
+
+**Permutation tests** provide a complementary approach. By repeatedly rearranging group labels and re-running the analysis, they generate a null distribution of results expected under no association. The observed results can then be assessed against this distribution. The rearrangement must respect the study design, including any pairing or repeated measurements. A permutation that breaks the design structure does not produce a valid null.
 
 ??? example "Case study: The placental microbiome"
 
@@ -67,10 +71,6 @@ Permutation tests provide a complementary approach. By repeatedly rearranging gr
     [doi:10.1186/s12915-014-0087-z](https://link.springer.com/article/10.1186/s12915-014-0087-z){target="_blank"}
     </small>
 
-!!! danger "Analytical controls cannot replace missing data"
-
-    Analytical controls assess whether results are more extreme than expected by chance. They cannot compensate for missing experimental controls or essential information that was never collected. Sometimes the impact can be assessed or partially mitigated, but resolving the uncertainty may require additional measurements or a new experiment.
-
 ---
 
 ## Consideration 8: Independent replication and pseudoreplication
@@ -78,13 +78,9 @@ Permutation tests provide a complementary approach. By repeatedly rearranging gr
 !!! danger "Design principle"
     Statistical inference should be performed at the level of the experimental unit, not the observational unit. Treating multiple measurements from the same experimental unit as independent replicates inflates the effective sample size and overstates confidence in the results.
 
-As introduced earlier, several measurements may come from the same
-biological unit. Multiple biopsies or cells from one patient provide more
-information about that patient, but do not increase the number of
-independent patients studied.
+As introduced earlier, several measurements may come from the same biological unit. Multiple biopsies or cells from one patient provide more information about that patient, but do not increase the number of independent patients studied.
 
-Treating these measurements as independent biological replicates is
-**pseudoreplication**. The analysis must account for their shared origin.
+Treating these measurements as independent biological replicates is **pseudoreplication**. The analysis must account for their shared origin.
 
 Two design choices require particular care when counting independent replicates: subsampling and pooling.
 
@@ -97,11 +93,7 @@ Neither subsampling nor pooling is inherently a mistake. Pseudoreplication occur
 !!! info "Multiplexing is not pooling"
     Multiplexing combines separately barcoded libraries onto the same sequencing run for efficiency. Demultiplexing recovers separate library measurements; whether these represent independent biological replicates depends on the study design. Samples from ten independent patients run together on one lane still represent ten independent biological units. Pooling biological material generally prevents separate measurement of individual contributions, unless these remain distinguishable through genetic differences or other identifiers.
 
-**Pseudoreplication in single-cell RNA-seq**
-
-Unlike bulk RNA-seq, which measures average gene expression across thousands of cells, single-cell RNA-seq profiles each cell individually, capturing the variation that bulk methods average away. A single experiment can generate profiles for tens of thousands of cells from a handful of donors. This resolution comes with a statistical trap: cells from the same individual share a common genetic and environmental background — they are subsamples of that individual, not independent observations. Analysing them as independent replicates inflates the degrees of freedom and elevates the false positive rate.
-
-![](figs_m1/03_pseudoreplication_single_cell_v02.jpg){width=95%}
+![](figs/1-2_pseudoreplication.jpg)
 
 ??? example "Case study: Pseudoreplication in single-cell omics"
      The study profiled approximately 80,000 nuclei from 48 individuals and
@@ -113,7 +105,7 @@ Unlike bulk RNA-seq, which measures average gene expression across thousands of 
     reassigning patient labels still produced many discoveries with cell-level
     testing, a pattern not seen with pseudobulk analysis.
 
-    ![](figs_m1/01pseudoreplication__case_study_v02.png){width=100%}
+    ![](figs/1-2_scpseudoreplication.png)
 
     <small>Original study: [Mathys et al. "Single-cell transcriptomic analysis of Alzheimer's disease." *Nature* 570 (2019)](https://www.nature.com/articles/s41586-019-1195-2){target="_blank"}</small>
 
