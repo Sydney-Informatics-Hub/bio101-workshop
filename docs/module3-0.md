@@ -19,6 +19,3 @@ To support tying together some of the earlier cocepts we have made a mental mode
 | **Design coherence** | Are the scientific question, cohort, variables, and platform aligned before data are generated? | Clear biological question; explicit hypothesis; well-defined comparison groups; relevant covariates and confounders; a platform that can answer the question within the study's cost and time constraints; a realistic statement of what the design can and cannot support. See [2.4.1 Design decisions in practice](module2-4-0.md). |
 
 ---
-
-!!! tip "Next step"
-    Start with [Module 3.1: Introduction and case studies](module3-1.md), then continue to [Module 3.2: Activity outline and exact steps](module3-2.md).
