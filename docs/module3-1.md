@@ -160,7 +160,7 @@ How would you improve the design?
     First, identify the primary problem: is it the wrong omics layer, a confounded comparison, unrecorded technical variables, or a study population that is too narrow? Then ask can be fixed analytically (e.g. by including a covariate in the model, or correcting for a batch effect) or whether it requires a design change. Some problems cannot be rescued after the fact. If redesigning, be specific: what would you change about recruitment, matching, processing, or measurement?
 ---
 
-## What to take away
+## Takeaways
 
 Across these scenarios, the same design logic applies:
 
