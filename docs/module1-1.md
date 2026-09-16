@@ -268,9 +268,7 @@ Each of the five molecular layers described above is studied by its own scientif
 
 !!! question "Walk the layers"
 
-    Form groups based on the organism you work with. Introduce your research to each other in a couple of sentences, then choose a high-level biological question your group wants to work through together.
-
-    Walk through the molecular layers and decide how you would approach your question. Write your answers on butchers paper and report back to the room (2 minutes per group).
+    Using one of the provided scenarios, consider the molecular layers in answering these questions:
 
     1. **Which molecular layer is suited to answering your question, and why?**
     2. **What can this layer tell you, and what would it miss?**
@@ -280,26 +278,117 @@ Each of the five molecular layers described above is studied by its own scientif
 
         **What is driving these patients' heart failure?**
 
-        A population of patients presents to hospital with heart failure and the underlying cause is unclear. Consider: would you start with inherited predisposition, the current transcriptional state of cardiac tissue, the metabolic status of the failing heart, or something else? What would each layer contribute, and what would remain unanswered?
+        A cohort of patients presents to hospital with heart failure of unknown aetiology. 
+        Echocardiography shows reduced ejection fraction and dilated ventricles, but standard 
+        clinical workup with imaging, blood panels, and coronary angiography, has not identified a 
+        cause. Left ventricular biopsies are collected at the time of surgical intervention 
+        and stored. A subset of patients have first-degree relatives with similar presentations, 
+        suggesting a possible heritable component; others have no family history.
+
+        At the cellular level, cardiomyocytes in failing hearts are known to undergo 
+        transcriptional reprogramming (reactivating a "fetal gene programme") and to shift 
+        their metabolic substrate preference from fatty acids toward glucose. Sarcomeric proteins 
+        may carry inherited variants that alter contractile force. Mitochondrial dysfunction is 
+        common but whether it is cause or consequence is often unclear. The same clinical 
+        endpoint (pump failure) can arise from fundamentally different molecular origins.
+
+        Biopsy-derived material is limiting; matched blood samples and, for some patients, 
+        germline DNA from saliva are also available.
 
     ??? example "Wildlife / infectious disease"
 
-        **Why do some populations tolerate an infectious disease while others suffer severe disease from the same pathogen?**
+        **Why do some populations tolerate an infectious disease while others suffer severe
+        disease from the same pathogen?**
 
-        Consider: is this a host question (immune response, genetic resistance), a pathogen question (strain, virulence factors), or both? Use any host–pathogen system relevant to your field.
+        Chytridiomycosis, caused by the fungal pathogen *Batrachochytrium dendrobatidis* (Bd),
+        has driven amphibian population collapses globally. Yet exposure to the same pathogen
+        produces markedly different outcomes across and within species: some populations suffer
+        near-total mortality, others show subclinical infection and persist, and a small number
+        of previously decimated populations appear to be recovering — suggesting that tolerance
+        or resistance can emerge over ecological timescales.
+
+        Bd targets keratinocytes in the skin. In susceptible hosts, infection disrupts
+        cutaneous electrolyte transport causing
+        osmotic imbalance that ultimately leads to cardiac arrest. The host skin also
+        functions as an immune organ: granular glands secrete antimicrobial peptides (AMPs)
+        with direct antifungal activity, and the composition of the resident skin microbiome
+        varies between individuals and populations, with some bacterial taxa (e.g.,
+        *Janthinobacterium lividum*) producing metabolites inhibitory to Bd.
+
+        On the host genomic side, MHC class II diversity has been associated with resistance
+        in some species, and population bottlenecks following epidemic sweeps may have altered
+        allele frequencies at immune loci. On the pathogen side, Bd isolates vary in
+        virulence — the Global Panzootic Lineage (Bd-GPL) is consistently more virulent than
+        endemic lineages — and strains differ in protease secretion and in the degree to which
+        they suppress host immune signalling.
+
+        Skin swabs, skin punch biopsies, blood, and tissue from the granular gland layer
+        are all collectable. Some populations can be sampled longitudinally; others are
+        accessible only at single time points due to rarity or access constraints.
 
     ??? example "Aquaculture / production biology"
 
         **Why do some farmed fish grow faster than others despite receiving the same diet?**
 
-        Consider: if diet is held constant, what could explain the variation? Genetics, developmental history, physiology, gut microbes? Which layer would you measure first, and how would you sample to make the comparison meaningful?
+        In a commercial Atlantic salmon cohort, fish are reared under identical conditions 
+        yet body mass diverges
+        substantially within a single cohort over a grow-out cycle. By harvest, the heaviest
+        individuals may be twice the mass of the lightest, with no obvious behavioural or
+        health explanation.
+
+        Skeletal muscle growth in fish occurs through two mechanisms: hypertrophy (existing
+        fibres enlarging) and hyperplasia (recruitment of myosatellite cells to form new
+        fibres). Both are regulated by the GH/IGF-1 axis, with myostatin acting as a
+        negative regulator of muscle mass (the same core pathway as in mammals). Nutrient
+        sensing through mTOR integrates amino acid availability with anabolic signalling.
+        Feed conversion efficiency (how much dietary protein is deposited as muscle versus
+        oxidised) varies between individuals and is partly heritable in salmonids.
+
+        The gut microbiome adds a further layer: microbial communities differ between
+        individuals raised in the same tank, influence bile acid recycling and short-chain
+        fatty acid production, and can alter host nutrient absorption independently of
+        diet composition. Early thermal or nutritional experience during embryogenesis can
+        also programme lasting differences in metabolic phenotype through mechanisms that
+        persist without changes to the underlying DNA sequence.
+
+        Liver, skeletal muscle, gut tissue, and blood are all accessible. Individual
+        fish can be tagged and tracked longitudinally, allowing repeated blood sampling
+        from the same animal, though tissue biopsies are terminal.
 
     ??? example "Plant / environmental stress"
 
-        **How does a crop plant respond to acute environmental stress, and what makes some varieties more tolerant than others?**
+        **How does a crop plant respond to acute environmental stress, and what makes
+        some varieties more resilient than others?**
 
-        Consider: the stress could be drought, heat, or salinity — pick whichever fits your system. The response happens fast, over hours to days. Which layers capture that timescale, and which are too slow or too stable to see it?
+        A set of wheat varieties is exposed to a controlled drought stress regime in
+        glasshouse conditions. Soil water is withheld for a defined period, then
+        restored. Physiological measurements like stomatal conductance, leaf water
+        potential, and chlorophyll fluorescence, confirm that stress was imposed and
+        that varieties differ in the severity of their response. Some varieties
+        maintain photosynthetic activity and recover quickly after rewatering; others
+        show sustained suppression of growth.
 
+        Plant stress responses operate across multiple timescales. Within minutes to
+        hours, stomata close in response to abscisic acid (ABA) signalling, and
+        reactive oxygen species (ROS) accumulate as a stress signal. Over hours to
+        days, transcriptional reprogramming occurs: stress-responsive transcription
+        factors (e.g., DREB/CBF family) activate downstream genes involved in
+        osmolyte synthesis, heat shock proteins, and antioxidant enzymes. At the
+        metabolic level, compatible solutes such as proline and glycine betaine
+        accumulate to maintain osmotic balance, and carbon metabolism shifts as
+        photosynthesis is constrained. Underlying all of this is the genetic
+        architecture of the varieties themselves — heritable differences in
+        regulatory sequences, gene copy number, or structural variants that
+        affect stress pathway components.
+
+        Leaf tissue is the primary sampling target but is metabolically dynamic as
+        composition changes rapidly after excision, so processing time matters.
+        Root tissue captures a different aspect of the drought response. Both
+        stressed and recovering time points are available, as well as an
+        unstressed baseline. The varieties differ in breeding history and are not
+        isogenic lines, meaning genetic background differences exist alongside
+        any stress-responsive differences.
+        
 ---
 
 !!! info "Module 1.1 takeaways"

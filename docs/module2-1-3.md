@@ -136,10 +136,10 @@ The purpose of the checklist is to ensure that no variable capable of explaining
 Beyond these, additional variables should be identified during study design based on what could systematically differ between samples in ways unrelated to the biological question. The relevant question is not "what variables are standard for this field" but "what conditions were not held constant across all samples." For clinical studies this typically includes diagnosis, disease severity, treatment history, and fasting status; for animal studies, housing conditions, diet, and circadian phase; for cell line work, passage number and media batch. The list above should be extended to cover anything that varied.
 
 !!! question "Activity: metadata audit"
-    Each activity presents a scenario describing a real study design problem. You are not expected to know the answer, the goal is to find it.
+    Each scenario describes a real study design problem. You are not expected to know the answer — the goal is to find it.
 
     1. Read the scenario.
-    2. Open a web browser and your search engine of choice. 
+    2. Open a web browser and search engine of your choice.
     3. Use the provided search term as a starting point. You may need to follow links or refine the search.
     4. Write a short answer to the **Find** question in your own words.
     5. Open the collapsible block to check your answer.

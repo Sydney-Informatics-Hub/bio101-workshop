@@ -22,7 +22,7 @@ This module is designed as a practical exercise in study diagnosis. The goal is 
 
 ------------------------------------------------------------------------
 
-### Scenario A: Proteomics in an acute inflammatory condition
+### Case study A: Proteomics in an acute inflammatory condition
 
 #### Study question
 
@@ -50,11 +50,11 @@ Cases were recruited prospectively at admission to hospital for nephritis and de
 
 ------------------------------------------------------------------------
 
-### Scenario B: Genomic markers for breed traits in dogs
+### Case study B: Genomic markers for breed traits in dogs
 
 #### Study question
 
-Can we identify genomic variants associated with observable traits across dog breeds using public data from unrelated studies?
+Can we identify genomic variants associated with body size across dog breeds using public data from unrelated studies?
 
 **Omics type:** Whole genome sequencing
 
@@ -93,7 +93,7 @@ This scenarios is based on real data published [here](https://www.nature.com/art
 
 ------------------------------------------------------------------------
 
-### Scenario C: Single-cell RNA sequencing in inflammatory disease
+### Case study C: Single-cell RNA sequencing in inflammatory disease
 
 #### Study question
 
@@ -124,45 +124,43 @@ Single-cell RNA sequencing was collected from blood samples and enriched for cir
 ## The practical questions to answer
 
 For each scenario, answer the questions below. Use the hints to guide your thinking, but do not treat them as a checklist with only one correct answer.
-
 ### 1. Identify the comparison
 
 What is the main comparison being made, what omics type is used, and does this answer the research question well?
 
 ??? tip "Hint"
-    Does the omics layer relate well to the biological variable being studied? Are you measuring the molecule or process that actually drives the trait, or only a downstream readout? Does the data type match the scientific question?
+    Start by writing out: *group A vs group B, measured using X, to ask whether Y differs.* Then check whether the molecular layer actually captures the biological process in question; is it measuring the molecule directly involved, or a downstream readout several steps removed? Also check whether the phenotype is measured at the level of the individual or assigned at the group level. These are different things and have different implications for what you can conclude.
 
 ### 2. Look for confounders
 
 Are there variables that differ between groups that could affect the outcome?
 
 ??? tip "Hint"
-    Were any variables clearly different between groups and could they act as confounders? Consider sex, age, disease severity, ancestry, treatment, collection time, or cell type composition. Ask whether each variable is part of the biology being studied or a design artefact that could bias the result. If it is a confounder, what direction or pattern of bias might it create?
+    List the variables recorded in the dataset. For each one, ask two questions: does it differ between the groups being compared, and could it independently affect the omics readout? If both are true, it is a potential confounder. Then ask which direction the bias runs; would this variable push the result toward or away from a difference? Not all confounders have the same consequence.
 
 ### 3. Check technical structure
 
 Could batch or technical effects influence the results, and were they captured?
 
 ??? tip "Hint"
-    Were samples processed together or across separate batches, sites, runs, or operators? Were technical covariates recorded, such as instrument, run date, reagent batch, extraction batch, or sample quality metrics? If a technical effect is present, could it be mistaken for biology?
+    Look at how and when samples were collected and processed. Were all groups handled identically and simultaneously, or were there separate recruitment windows, processing dates, instruments, or sites? Check whether any technical variable is systematically linked to the biological group; if cases were processed in one batch and controls in another, any batch effect becomes indistinguishable from biology.
 
 ### 4. Define the scope of the findings
 
 Could these findings apply to populations outside this study?
 
 ??? tip "Hint"
-    Think about scope and generalisability. Are the conclusions limited to a particular sex, ancestry, species, tissue, cell type, disease stage, or setting? Can the finding reasonably be applied beyond the exact study population, or are the results only valid for a narrower group?
+    Look at who was recruited and how. Were inclusion criteria narrow? e.g. specific age range, sex, disease stage, ancestry, tissue, institution. Consider who is missing: excluded populations, underrepresented groups, or settings that differ from where the finding might be applied. A result is only generalisable to populations that resemble the study population in the ways that matter biologically.
 
 ### 5. Propose an improvement
 
 How would you improve the design?
 
 ??? tip "Hint"
-    Is the main problem a mismatch between the omics layer and the biology, confounding that could be prevented by better matching or blocking, unrecorded metadata, poor batch control, or a study population that is too narrow? Consider whether the issue can be addressed analytically or whether the design itself needs to change.
-
+    First, identify the primary problem: is it the wrong omics layer, a confounded comparison, unrecorded technical variables, or a study population that is too narrow? Then ask can be fixed analytically (e.g. by including a covariate in the model, or correcting for a batch effect) or whether it requires a design change. Some problems cannot be rescued after the fact. If redesigning, be specific: what would you change about recruitment, matching, processing, or measurement?
 ---
 
-## What to take away
+## Takeaways
 
 Across these scenarios, the same design logic applies:
 
