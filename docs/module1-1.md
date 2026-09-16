@@ -268,9 +268,7 @@ Each of the five molecular layers described above is studied by its own scientif
 
 !!! question "Walk the layers"
 
-    Form groups based on the organism you work with. Introduce your research to each other in a couple of sentences, then choose a high-level biological question your group wants to work through together.
-
-    Walk through the molecular layers and decide how you would approach your question. Write your answers on butchers paper and report back to the room (2 minutes per group).
+    Using one of the provided scenarios, consider the molecular layers in answering these questions:
 
     1. **Which molecular layer is suited to answering your question, and why?**
     2. **What can this layer tell you, and what would it miss?**
