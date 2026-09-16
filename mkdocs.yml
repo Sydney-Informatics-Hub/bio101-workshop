@@ -27,8 +27,9 @@ nav:
       - Module 2.3 Generalisability:
           - 2.3.1 Who the findings apply to: module2-3-1.md
       - Module 2.4 Design decisions in practice: module2-4-0.md
-  - Module 3: module3.md
-  - Further reading: further-reading.md
+  - Module 3: 
+    - Overview: module3-0.md
+    - Activity: module3-1.md
 
 theme:
   name: material
