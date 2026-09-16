@@ -54,7 +54,7 @@ Cases were recruited prospectively at admission to hospital for nephritis and de
 
 #### Study question
 
-Can we identify genomic variants associated with observable traits across dog breeds using public data from unrelated studies?
+Can we identify genomic variants associated with body size across dog breeds using public data from unrelated studies?
 
 **Omics type:** Whole genome sequencing
 

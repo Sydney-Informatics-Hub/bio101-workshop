@@ -295,7 +295,7 @@ Each of the five molecular layers described above is studied by its own scientif
         Biopsy-derived material is limiting; matched blood samples and, for some patients, 
         germline DNA from saliva are also available.
 
-??? example "Wildlife / infectious disease"
+    ??? example "Wildlife / infectious disease"
 
         **Why do some populations tolerate an infectious disease while others suffer severe
         disease from the same pathogen?**
@@ -357,10 +357,38 @@ Each of the five molecular layers described above is studied by its own scientif
 
     ??? example "Plant / environmental stress"
 
-        **How does a crop plant respond to acute environmental stress, and what makes some varieties more tolerant than others?**
+        **How does a crop plant respond to acute environmental stress, and what makes
+        some varieties more resilient than others?**
 
-        Consider: the stress could be drought, heat, or salinity — pick whichever fits your system. The response happens fast, over hours to days. Which layers capture that timescale, and which are too slow or too stable to see it?
+        A set of wheat varieties is exposed to a controlled drought stress regime in
+        glasshouse conditions. Soil water is withheld for a defined period, then
+        restored. Physiological measurements like stomatal conductance, leaf water
+        potential, and chlorophyll fluorescence, confirm that stress was imposed and
+        that varieties differ in the severity of their response. Some varieties
+        maintain photosynthetic activity and recover quickly after rewatering; others
+        show sustained suppression of growth.
 
+        Plant stress responses operate across multiple timescales. Within minutes to
+        hours, stomata close in response to abscisic acid (ABA) signalling, and
+        reactive oxygen species (ROS) accumulate as a stress signal. Over hours to
+        days, transcriptional reprogramming occurs: stress-responsive transcription
+        factors (e.g., DREB/CBF family) activate downstream genes involved in
+        osmolyte synthesis, heat shock proteins, and antioxidant enzymes. At the
+        metabolic level, compatible solutes such as proline and glycine betaine
+        accumulate to maintain osmotic balance, and carbon metabolism shifts as
+        photosynthesis is constrained. Underlying all of this is the genetic
+        architecture of the varieties themselves — heritable differences in
+        regulatory sequences, gene copy number, or structural variants that
+        affect stress pathway components.
+
+        Leaf tissue is the primary sampling target but is metabolically dynamic as
+        composition changes rapidly after excision, so processing time matters.
+        Root tissue captures a different aspect of the drought response. Both
+        stressed and recovering time points are available, as well as an
+        unstressed baseline. The varieties differ in breeding history and are not
+        isogenic lines, meaning genetic background differences exist alongside
+        any stress-responsive differences.
+        
 ---
 
 !!! info "Module 1.1 takeaways"
