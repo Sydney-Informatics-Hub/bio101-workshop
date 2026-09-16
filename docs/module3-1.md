@@ -22,7 +22,7 @@ This module is designed as a practical exercise in study diagnosis. The goal is 
 
 ------------------------------------------------------------------------
 
-### Scenario A: Proteomics in an acute inflammatory condition
+### Case study A: Proteomics in an acute inflammatory condition
 
 #### Study question
 
@@ -50,7 +50,7 @@ Cases were recruited prospectively at admission to hospital for nephritis and de
 
 ------------------------------------------------------------------------
 
-### Scenario B: Genomic markers for breed traits in dogs
+### Case study B: Genomic markers for breed traits in dogs
 
 #### Study question
 
@@ -93,7 +93,7 @@ This scenarios is based on real data published [here](https://www.nature.com/art
 
 ------------------------------------------------------------------------
 
-### Scenario C: Single-cell RNA sequencing in inflammatory disease
+### Case study C: Single-cell RNA sequencing in inflammatory disease
 
 #### Study question
 
