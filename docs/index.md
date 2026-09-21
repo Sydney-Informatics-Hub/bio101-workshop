@@ -6,7 +6,7 @@ This workshop introduces you to the principles and practices needed to design om
 - [Module 2](module2-0.md): Designing robust studies 
 - [Module 3](module3-0.md): Applying experimental design principles 
 
-You can also download a copy of the <a href="../2026-bio101-slides-bundle.pdf" download>slides</a> used in the September 2026 in-person delivery of this workshop.
+You can also download a copy of the <a href="https://github.com/Sydney-Informatics-Hub/bio101-workshop/raw/main/2026-bio101-slides-bundle.pdf" download>slides</a> used in the September 2026 in-person delivery of this workshop.
 
 ## Background 
 
